@@ -1,4 +1,25 @@
+@import url("global.css");
+
 html {
-	background: url(../img/osnabruck.jpg) no-repeat center center fixed;
+	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/osnabruck.jpg) no-repeat center center fixed;
 }
 
+div.left-side {
+	width: 48%; 
+	float: left;
+}
+
+div.right-side {
+	margin-left: 52%; 
+	padding-left:0px
+}
+
+div.icon-holder {
+	position:relative;
+	bottom:0;
+}
+
+img.icon {
+	border-radius:25px;
+	height:100px;
+}
