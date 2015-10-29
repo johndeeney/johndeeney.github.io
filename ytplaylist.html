@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<object width="1280" height="745">
-			<param name="movie" value="http://www.youtube.com/v/kCfP003Btjw?fs=1&hl=en_US&rel=0&autoplay=1"></param>
-			<param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
-			<embed src="https://www.youtube.com/watch?v=-YuBIAWPUPc?fs=1&hl=en_US&rel=0&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="1280" height="745"></embed>
-	</object>
-</body>
+		<div id="player"><iframe width="560" height="315" src="https://www.youtube.com/embed/J8XyHt_MGIU" frameborder="0" allowfullscreen></iframe></div>
+
+		<script src="http://www.youtube.com/player_api"></script>
+
+		<script>
+
+			// create youtube player
+			var player;
+			function onYouTubePlayerAPIReady() {
+				player = new YT.Player('player', {
+				  height: '390',
+				  width: '640',
+				  videoId: '0Bmhjf0rKe8',
+				  events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				  }
+				});
+			}
+
+			// autoplay video
+			function onPlayerReady(event) {
+				event.target.playVideo();
+			}
+
+			// when video ends
+			function onPlayerStateChange(event) {        
+				if(event.data === 0) {          
+					alert('done');
+				}
+			}
+
+		</script>
+	</body>
 </html>
