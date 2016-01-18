@@ -1,3 +1,25 @@
+@import url("global.css");
+
 html {
 	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/rochester.jpg) no-repeat center center fixed;
+}
+
+div.left-side {
+	width: 33%;
+	float: left;
+    margin-right: 25px;
+}
+
+div.right-side {
+	margin-left: 35%;
+}
+
+div.icon-holder {
+	position:relative;
+	bottom:0;
+}
+
+img.icon {
+	border-radius:25px;
+	width:32%;
 }
