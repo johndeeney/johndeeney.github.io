@@ -5,7 +5,7 @@ $(document).ready( function() {
     var daysToLastClass;
     var daysToCommencement;
     var today = new Date();
-    var ithaca = new Date("2016-02-19T07:00:00");
+    var ithaca = new Date("2016-02-18T07:00:00");
     daysToIthaca = Math.ceil( (ithaca - today) / (1000*3600*24) );
 
     var spring = new Date("2016-03-15T07:00:00");
